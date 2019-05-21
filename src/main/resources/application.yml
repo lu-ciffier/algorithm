@@ -2,7 +2,12 @@ spring:
   application:
     name: algorithm
 server:
-  port: 8085
+  port: 8443
+  ssl:
+    key-store: classpath:lucifer.keystore
+    key-password: lucifer
+    key-store-type: JKS
+    key-alias: tomcat
 
 eureka:
   client:
